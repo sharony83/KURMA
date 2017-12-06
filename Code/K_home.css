@@ -90,6 +90,7 @@ hr {
     margin-top: auto;
     color: aliceblue;
 }
+.hide-small{display:none}
 
 .footer {
     display: inline;
