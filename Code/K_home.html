@@ -14,75 +14,116 @@
     </head>
     <body>
 
+        <div class="top">
+            <div class="header">
+                <div class="logo">
+                    <a href="K_home.html"><img src="../Components/k_logopng.png" height="50" width="50"></a></div>
 
-        <div class="header">
-            <div class="logo">
-                <img src="../Components/k_logopng.png" height="50" width="50"></div>
-            
-            <div class="nav">
-                <ul>
-                    <li><a href="./yoga.html"> YOGA </a></li>
-                    <li><a href="./class.html"> CLASS </a></li>
-                    <li><a href="./schedule.html"> SCHEDULE </a></li>
-                    <li><a href="./gallery.html"> GALLERY </a></li>
-                    <li><a href="./contact.html"> CONTACT </a></li>
-                </ul>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#yoga"> YOGA </a></li>
+                        <li><a href="#class"> CLASS </a></li>
+                        <li><a href="#schedule"> SCHEDULE </a></li>
+                        <li><a href="#gallery"> GALLERY </a></li>
+                        <li><a href="#Contact"> CONTACT </a></li>
+                    </ul>
+                </div>
+
             </div>
 
+            <div class="main">
+                <h1>KURMA YOGA</h1>
+                <p><em>Keep following your dreams...</em></p>
+
+                <div class="counting">
+                    <br>
+                    <h2>Open soon...</h2>
+                    <hr>
+                    <p id="demo"> </p>
+
+                </div>
+                <script>
+                    // Set the date we're counting down to
+                    var countDownDate = new Date("Jan 3, 2018 09:30:00").getTime();
+
+                    // Update the count down every 1 second
+                    var countdownfunction = setInterval(function() {
+
+                        // Get todays date and time
+                        var now = new Date().getTime();
+
+                        // Find the distance between now an the count down date
+                        var distance = countDownDate - now;
+
+                        // Time calculations for days, hours, minutes and seconds
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                        // Output the result in an element with id="demo"
+                        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                            + minutes + "m " + seconds + "s ";
+
+                        // If the count down is over, write some text
+                        if (distance < 0) {
+                            clearInterval(countdownfunction);
+                            document.getElementById("demo").innerHTML = "HAPPY BIRTHDAY MON AMOUR";
+                        }
+                    }, 1000);
+                </script>
+
+            </div>
+            <div class="footer">
+                <h3>  Be informed...
+                    <form>
+                        <input type="email" placeholder="Enter your Email...">
+                        <button type="submit" class="btn1">I'm In !</button>
+                    </form></h3>
+
+            </div>
+            <div></div>
+        </div>
+        <div class="section1" id="yoga">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Yoga</h1>
         </div>
 
-        <div class="main">
-            <h1>KURMA YOGA</h1>
-            <p><em>Keep following your dreams...</em></p>
-
-            <div class="counting">
+        <div class="section2">
+            <div class="container" id="class">
                 <br>
-                <h2>Open soon...</h2>
-                <hr>
-                <p id="demo"> </p>
-
+                <br>
+                <br>
+                <br>
+                <h2>class</h2>
             </div>
-            <script>
-                // Set the date we're counting down to
-                var countDownDate = new Date("Jan 3, 2018 09:30:00").getTime();
-
-                // Update the count down every 1 second
-                var countdownfunction = setInterval(function() {
-
-                    // Get todays date and time
-                    var now = new Date().getTime();
-
-                    // Find the distance between now an the count down date
-                    var distance = countDownDate - now;
-
-                    // Time calculations for days, hours, minutes and seconds
-                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    // Output the result in an element with id="demo"
-                    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                        + minutes + "m " + seconds + "s ";
-
-                    // If the count down is over, write some text 
-                    if (distance < 0) {
-                        clearInterval(countdownfunction);
-                        document.getElementById("demo").innerHTML = "HAPPY BIRTHDAY MON AMOUR";
-                    }
-                }, 1000);
-            </script>
-
         </div>
-        <div class="footer">
-            <h3>  Be informed... 
-                <form>
-                    <input type="email" placeholder="Enter your Email...">
-                    <button type="submit" class="btn1">I'm In !</button>
-                </form></h3> 
 
+        <div class="section3" id="schedule">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Schedule</h2>
         </div>
-<div></div>
+
+        <div class="section4" id="gallery">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Gallery</h2>
+        </div>
+        <div class="section5" id="Contact">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Contact</h2>
+        </div>
 
     </body>
 </html>
